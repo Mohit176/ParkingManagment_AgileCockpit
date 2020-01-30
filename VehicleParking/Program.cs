@@ -37,7 +37,6 @@ namespace VehicleParking
                     vehicleType = VehicleType.Bus;
                 }
 
-
                 VehicleBase vehicle = FactoryVehicle.Create(vehicleType);
 
                 AllocateParkingSlot(vehicle, parkingLot);
@@ -69,6 +68,8 @@ namespace VehicleParking
             if (availableParkingSlot != null)
             {
                 parkingLot.AllocateParkingSlot(vehicle, availableParkingSlot);
+
+                Console.WriteLine(String.Format("Parking Number {0} is allocated to vehicle", availableParkingSlot.ParkingNumber));
             }
         }
 
