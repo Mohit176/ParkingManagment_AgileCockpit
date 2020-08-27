@@ -39,11 +39,3 @@ steps:
     feedsToUse: 'select'
     vstsFeed: '5b8b4e5d-d1e4-40db-8907-c78d7670910c/2662bd11-27df-4a7d-8f83-9693cae3773b'
     
-
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: '5b8b4e5d-d1e4-40db-8907-c78d7670910c/2662bd11-27df-4a7d-8f83-9693cae3773b'
